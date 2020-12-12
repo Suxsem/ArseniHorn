@@ -26,7 +26,7 @@
 #define LED_PIN 2
 #define HORN_PIN 12
 
-#define HORN_ON_TIME 1000
+#define HORN_ON_TIME 2000
 
 boolean hornOn = false;
 long hornOnLast;
