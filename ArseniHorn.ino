@@ -161,6 +161,8 @@ void setup() {
   EEPROM.begin(256);
 
   wifiSetup();
+  
+  ArduinoOTA.begin();
 }
 
 void wifiSetup() {
@@ -196,7 +198,6 @@ void wifiSetup() {
 
 void processNet() {
   if (WiFi.status() == WL_CONNECTED) {
-    ArduinoOTA.begin();
     ArduinoOTA.handle();
     if (client.connected()) {
       client.loop();
